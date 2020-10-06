@@ -58,13 +58,27 @@ class DetailChartCountry : AppCompatActivity() {
         val data = intent.getParcelableExtra<CountriesItem>(extra_country)
         val formater = DecimalFormat("#,###")
         data?.let {
+            //untuk mengget nama negara
             txt_countryName.text = data.country
+                       //get data terupdate
             txt_totalCurrentConfirmed.text = formater.format(data.totalConfirmed?.toDouble())
+                        //get total yg meninggal
+
             txt_newConfirmed.text = formater.format(data.newConfirmed?.toDouble())
+                        //get data new deaths
+
             txt_newDeaths.text = formater.format(data.newDeaths?.toDouble())
+                        //get data new confirm
+
             txt_totalCurrentDeaths.text=formater.format(data.totalDeaths?.toDouble())
+                        //get data total confirm
+
             txt_totalCurrentRecovered.text = formater.format(data.totalRecovered?.toDouble())
+                        //get total recover
+
             txt_newRecovered.text = formater.format(data.newRecovered?.toDouble())
+                        //get total new recover
+
 
 //            untuk menyimpan data
             editor.putString(data.country,data.country)
