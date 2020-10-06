@@ -23,6 +23,7 @@ interface InfoService{
 //untuk koneksi
 object RetrofitBuilder{
         //untuk mengcek koneksi internet
+
     private val okhttp = OkHttpClient().newBuilder()
         .connectTimeout(15,TimeUnit.SECONDS)
         .readTimeout(10,TimeUnit.SECONDS)
@@ -34,4 +35,5 @@ object RetrofitBuilder{
         .client(okhttp)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
+    //testetstes
 }
